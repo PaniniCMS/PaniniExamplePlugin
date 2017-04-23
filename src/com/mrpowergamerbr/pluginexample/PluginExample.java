@@ -5,8 +5,8 @@ import com.mitchellbosecke.pebble.template.PebbleTemplate;
 import com.paninicms.Panini;
 import com.paninicms.plugin.PaniniPlugin;
 import com.paninicms.plugin.event.PostRenderEvent;
+import com.paninicms.plugin.event.PreRenderEvent;
 import com.paninicms.utils.PaniniUtils;
-import com.paninicms.utils.RenderContext;
 
 public class PluginExample extends PaniniPlugin {
 	@Override
@@ -15,8 +15,8 @@ public class PluginExample extends PaniniPlugin {
 	}
 	
 	@Override
-	public void onPreRender(RenderContext context) {
-		context.contextVars().put("helloWorld", "Shantae <3"); // We are going to store "Shantae <3" on the variable "helloWorld"
+	public void onPreRender(PreRenderEvent ev) {
+		ev.getRenderContext().contextVars().put("helloWorld", "Shantae <3"); // We are going to store "Shantae <3" on the variable "helloWorld"
 		// We can access it by using {{ helloWorld }} in your template
 	}
 	
