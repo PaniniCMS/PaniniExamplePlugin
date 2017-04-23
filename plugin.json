@@ -1,0 +1,5 @@
+{
+    "pluginName": "PaniniExamplePlugin",
+    "classPath": "com.mrpowergamerbr.pluginexample.PluginExample",
+    "version": "1.0.0"
+}
